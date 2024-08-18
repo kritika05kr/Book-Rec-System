@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Goudy+Bookletter+1911&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Goudy Bookletter 1911", serif;
+}
+nav {
+    color: white;
+    background-color: #fff; /* Navbar background color */
+    /* box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.3); Shadow at the bottom */
+    box-shadow: 0px 13px 9px -1px rgba(0, 0, 0, 0.3);
+    padding: 10px 0; /* Padding at top and bottom */
+    position: relative; /* Required for stacking context */
+    z-index: 1; /* Ensure navbar is above other content */
+    background-color: #583d67;
+    position: sticky;
+    top: 0;
+  }
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .container .logo{
+    color: white;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    font-size: xx-large;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+nav ul li{
+    list-style: none;
+}
+
+nav .menu{
+    font-size: larger;
+    gap: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .menu .sub-menu{
+    padding-right: 3rem;
+    gap: 5rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+
+
+section::before {
+    content: "";
+    background-image: url("/image/img1.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+section{
+    text-align: center;
+}
+
+section .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    color: white;
+    font-size: 1.3em;
+    margin: 17rem 9rem 0rem 9rem;
+}
+
+/* @media only screen and(max-width: 700px){
+    section .container{
+        margin: 12rem 2rem 0rem 2rem;
+    }
+} */
+
+
+section .container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 5rem; */
+    color: white;
+    font-size: 1.3em;
+    margin: 12rem 7rem 0rem 13rem;
+}
+section .container p{
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+section .container1 p{
+    font-size: 1.3em;
+    padding-bottom: 4rem;
+    
+}
+@media only screen and (max-width: 800px) {
+    section .container {
+        margin: 12rem 2rem 0rem 2rem;
+    }
+
+    section .container p{
+        font-size: 1.1em;
+    }
+}
+
+section input[type="text"] {
+    outline: none;
+    padding: 10px; /* Adjust padding as needed */
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: 350px; /* Input field width */
+    margin-right: 10px; /* Margin between input and button */
+  }
+
+  
+  /* Style for button */
+section  button[type="submit"] {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color:#40a762; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer on hover */
+    font-size: 16px; /* Font size */
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* Change button color on hover */
+section  button[type="submit"]:hover {
+    background-color: #c02ed2; /* Change background color */
+}
+
+@media only screen and (max-width: 800px) {
+    section .container1 {
+        margin: 9rem 2rem 0rem 2rem;
+    }
+
+    section .container1 p{
+        font-size: 1.1em;
+    }
+    section button{
+        margin-top: 1rem;
+    }
+    section input[type="text"]{
+        width: 250px;
+    }
+
+    
+}
+
+.book_50{
+    margin: 2rem 2rem;
+}
+
+.heading{
+    padding-top: 19rem;
+    text-align: center;
+    font-size: large;
+}
+.heading h1{
+    color: black;
+}
+
+.book_50 .books{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.book_50 .books .card img{
+    width: 337;
+    height: 70vh;
+    border-radius: 25px;
+
+}
+
+.card .card-body{
+    color: black; width: 330px;
+}
+
+.card .card-body a{
+    color: black; text-decoration: none;
+}
+
+.card .card-body .content{
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    text-align: -webkit-left;
+}
+.card .card-body .text-white{
+    padding-bottom: 11px;
+    font-size: 1.6em;
+}
+.card .card-body .text-white2{
+    padding-bottom: 8px;
+}
+
+.link-click{
+    text-align: end;
+margin: 2rem
+}
+
+footer{
+    background-color: #333; color: white; text-align: center; padding: 20px;
+    bottom: 0;
+}
+
+@media only screen and (max-width:700px){
+    .heading{
+        padding-top: 9rem;
+    }
+}
+
+
+@media only screen and (max-width:500px){
+    .card .card-body{
+        width: 100%;
+    }
+    .book_50 .books .card img{
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hive</title>
+    <link rel="stylesheet" href="../public/style/home.css">
+    <link rel="stylesheet" href="../public/style/header.css">
+
+
+    <style>
+        /* section::after {
+    content: "";
+    background-image: url("../public/image/book8.jpg");
+    background-size: cover;
+    background-position:initial;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+body{
+    background-color: floralwhite;
+}
+
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../public/image/book7.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} */
+
+      
+    </style>
+</head>
+<body>
+    <div class="container2">
+        <div class="logo">BookHive</div>
+        <div class="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+          <li><a class="home" href="/">Home</a></li>
+          
+          <li class="dropdown">
+            <a href="/search" >Search</a>
+            <li><a href="/browse">Browse</a></li>
+          </li>
+          <li class="dropdown">
+            <a href="/about">About</a>
+          </li>
+          <li><a href="/contact">ContactUs</a></li>
+          {% if username  %}
+          <li><a href="/logout">Logout</a></li>
+          {% else %}
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    
+
+    <!-- <section class="searching" id="search">
+        <div class="container">
+        <p>Welcome to <b>Kritika</b>, your ultimate destination for personalized book recommendations. Let us guide you to your next literary adventure with handpicked reads tailored just for you. Start exploring today!</p>
+        <form action="/recommend_books" method="post">
+            <input type="text" placeholder="Enter Book Name..." name="user_input"/> 
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    </section> -->
+    
+
+    <div class="heading" id="browse" style="padding-top: 2rem;">
+        <h1>Some Top Rated Books</h1>
+    </div>
+
+
+    
+
+
+<div class="big_container" >
+    <div class="book_50">
+        <div class="books">
+            {% for i in range(book_name|length) %}
+            <div class="card">
+                <div class="card-body">
+                    <a href="/recommend/{{ book_name[i] }}" class="book-link" >
+                    <img class="card-img-top" src="{{ image[i] }}">
+                    <div class="content">
+                    <p class="text-white">{{ book_name[i] }}</p>
+                    </a>
+                    <h4 class="text-white2" >Author: {{ author[i] }}</h4>
+                    <h4 class="text-white2">Publisher: {{ publisher[i] }}</h4>
+                    <h4 class="text-white2">Year-Of-Publication: {{ yop[i] }}</h4>
+                
+                    <h4 class="text-white2">Rating - {{ rating[i] }}</h4>
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+    
+    <footer>
+        <p>&copy; BookHive 2024 </p>
+    </footer>
+
+    <script src="../public/js/header.js"></script>
+    
+</body>
+</html>
